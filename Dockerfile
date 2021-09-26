@@ -78,6 +78,7 @@ WORKDIR /opt
 
 RUN apt-get -y update && apt-get -y install --no-install-recommends \
   autoconf \
+  automake \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* \
   && git clone https://github.com/wingunder/redis-plus-plus-modules.git \
