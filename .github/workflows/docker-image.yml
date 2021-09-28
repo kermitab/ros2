@@ -36,6 +36,7 @@ jobs:
         context: .
         push: false
         tags: ${{ steps.prep.outputs.image }}:foxy
+        buildkitd-flags: --debug
         target: foxy
         cache-from: type=local,src=/tmp/.buildx-cache
         cache-to: type=local,dest=/tmp/.buildx-cache-new
